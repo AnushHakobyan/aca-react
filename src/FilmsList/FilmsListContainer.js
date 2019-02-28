@@ -24,9 +24,9 @@ class FilmsListContainer extends Component {
             });
     }
 
-    markWatched = (_, title) => {
+    markWatched = (_,filmname) => {
         const updatedFilms = this.state.films.map(
-            ({ filmTitle, watched }) =>  ({ title: filmTitle, watched: filmTitle === title }));
+            ({ title, watched }) =>  ({ title: title, watched: title === filmname }));
         this.setState({ films: updatedFilms });
     };
 
