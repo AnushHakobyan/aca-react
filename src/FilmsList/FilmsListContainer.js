@@ -28,9 +28,9 @@ class FilmsListContainer extends Component {
         const updatedFilms = this.state.films.map(
             ({ title, watched }) =>  {
                 if (watched === true){
-                    return { title: title, watched: true }
+                    return { title, watched: true }
                 }
-                return { title: title, watched: title === filmname }
+                return { title, watched: title === filmname }
             });
         this.setState({ films: updatedFilms });
     };
